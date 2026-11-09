@@ -1,0 +1,41 @@
+.account-page { max-width: 1040px; }
+.account-page .page-heading { margin-bottom: 24px; }
+.account-page .page-heading p { margin-top: 7px; }
+.account-grid { display: grid; grid-template-columns: minmax(0, 1fr) 270px; gap: 22px; align-items: start; }
+.account-card { padding: 26px; min-width: 0; }
+.account-card-heading { display: flex; align-items: flex-start; gap: 12px; padding-bottom: 22px; border-bottom: 1px solid var(--line); margin-bottom: 22px; }
+.account-card-heading > svg { margin-top: 2px; color: var(--brand-primary); }
+.account-card-heading h2 { font-size: 16px; }
+.account-card-heading p { margin-top: 5px; font-size: 12px; }
+.account-form fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.account-field { margin-bottom: 20px; min-width: 0; }
+.account-field .form-control { min-height: 45px; width: 100%; font-size: 13px; }
+.account-field [aria-invalid="true"] { border-color: var(--danger); }
+.account-password-input { position: relative; }
+.account-password-input .form-control { padding-right: 52px; }
+.account-password-input .icon-button { position: absolute; top: 1px; right: 1px; min-height: 43px; width: 44px; }
+.account-field-hint { margin-top: 7px; font-size: 11px; line-height: 1.6; }
+.account-field-error { margin-top: 6px; font-size: 12px; color: var(--danger); }
+.account-form-divider { height: 1px; background: var(--line); margin: 25px 0; }
+.account-form-actions { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--line); }
+.account-form-actions p { font-size: 11px; max-width: 205px; }
+.account-form-actions .btn { min-height: 44px; white-space: nowrap; }
+.account-info { padding: 24px; }
+.account-info > svg { color: var(--brand-primary); margin-bottom: 12px; }
+.account-info h2 { margin-bottom: 10px; }
+.account-info p { font-size: 12px; line-height: 1.8; }
+.account-info p + p { margin-top: 13px; }
+.account-alert { font-size: 12px; line-height: 1.65; }
+.account-demo { display: flex; gap: 16px; padding: 25px; }
+.account-demo > svg { color: var(--brand-primary); }
+.account-demo p { margin-top: 6px; line-height: 1.8; }
+@media (max-width: 800px) {
+  .account-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .account-card, .account-info { padding: 21px; }
+}
+@media (max-width: 480px) {
+  .account-card { padding: 19px 16px; }
+  .account-form-actions { align-items: stretch; flex-direction: column; }
+  .account-form-actions p { max-width: none; }
+  .account-form-actions .btn { width: 100%; }
+}
