@@ -1,0 +1,43 @@
+{
+  "name": "duta-persada-marketing-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Dashboard marketing lapangan LPK Duta Persada — Google Sheets read-only",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n API,WEB -c blue,yellow \"node --watch server/index.mjs\" \"vite\"",
+    "dev:api": "node --watch server/index.mjs",
+    "dev:web": "vite",
+    "build": "vite build",
+    "start": "node server/index.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:e2e": "playwright test",
+    "test:e2e:report": "playwright show-report",
+    "create-user": "node scripts/create-user.mjs"
+  },
+  "dependencies": {
+    "@fontsource/dm-sans": "5.3.0",
+    "bootstrap": "5.3.8",
+    "dotenv": "18.0.9",
+    "express": "5.3.0",
+    "express-rate-limit": "8.7.1",
+    "express-session": "1.19.0",
+    "google-auth-library": "11.3.1",
+    "helmet": "8.3.0",
+    "lucide-react": "1.61.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "session-file-store": "1.5.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.15",
+    "@playwright/test": "1.64.1",
+    "@vitejs/plugin-react": "6.1.2",
+    "concurrently": "10.0.6",
+    "supertest": "7.3.1",
+    "vite": "8.3.5"
+  }
+}
